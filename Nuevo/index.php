@@ -25,52 +25,49 @@ function hasA($string){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="../CSS/style.css">
     <title>Nuevo</title>
 </head>
 <body>
-    <a href="cdmx.php"><button type="button">Regresar</button></a>
-    <form action="nuevor.php" method="post">
-    <?php
-    $con = mysqli_connect("localhost","root","Lasric.2018","Minmer");
-    ?>
-    Ciudad: <select name="DB">
+    <form id="data">
+    Ciudad: <select class="option" name="city">
         <option value="CDMX">CDMX</option>
         <option value="GDL">GDL</option>
         <option value="MTY">MTY</option>
         <option value="CUN">CUN</option>
         <option value="SJD">SJD</option>
         <option value="QRO">QRO</option>
-    </select> <br>
-    Fecha de carga: <input type="text" name="FechaC" ><br>
-    Fecha de entrega: <input type="text" name="FechaE"><br>
-    Operador: <input type="text" name="Operador"><br>
-    Placas: <input type="text" name="Placas"><br>
-    ID: <input type="text" name="ID"><br>
-    SO: <input type="text" name="OS"><br>
-    Factura: <input type="text" name="Factura"><br>
-    Cliente: <input type="text" name="Cliente"><br>
-    PZS: <input type="text" name="PZS" ><br>
-    Cajas: <input type="text" name="Caja"><br>
-    Subtotal: <input type="text" name="Subtotal"><br>
-    Horario: <input type="text" name="Horario">:00<br>
-    Direccion: <input type="text" name="Direccion"><br>
-    Destino: <input type="text" name="Destino" ><br>
-    Concepto: <input type="text" name="Concepto"><br>
-    Capacidad: <input type="text" name="Capacidad"><br>
-    Observaciones: <input type="text" name="Observaciones"><br>
-    OE: <input type="text" name="OE"><br>
-    Custodia: <input type="text" name="Custodia"><br>
-    <input type="hidden" name="ID_SQL" value="<?php echo $tem_id;  ?>">
+    </select><br>
+    Fecha de carga: <input type="date" name="FechaC">
+    Fecha de entrega: <input type="date" name="FechaE">
+    Operador: <input type="text" name="Operador">
+    Placas: <input type="text" name="Placas">
+    ID: <input type="text" name="ID">
+    SO: <input type="text" name="SO">
+    Factura: <input type="text" name="Factura">
+    Cliente: <input type="text" name="Cliente">
+    PZS: <input type="text" name="PZS" >
+    Cajas: <input type="text" name="Caja">
+    Subtotal: <input type="text" name="Subtotal">
+    Horario: <input type="text" name="Horario">
+    Direccion: <input type="text" name="Direccion">
+    Destino: <input type="text" name="Destino" >
+    Concepto: <input type="text" name="Concepto">
+    Capacidad: <input type="text" name="Capacidad">
+    Observaciones: <input type="text" name="Observaciones">
+    OE: <input type="text" name="OE">
+    Custodia: <input type="text" name="Custodia">
     <input type="submit" value="Guardar">
+    <h3 id="res"></h3>
+    <a href="../CDMX/"><button type="button">Regresar</button></a>
     </form>
     <form enctype="multipart/form-data" method="post">
         Subir registro exel: <input type="file" name="myfile">
-        <link rel="stylesheet" href="cssforT.css">
         <input type="submit" value="Subir">
     </form>
-    <?php $con->close(); ?>
 </body>
+<script src="nuevo.js"></script>
+<script src="secureacces.js"></script>
 </html>
 <?php 
 error_reporting(E_ALL);
@@ -100,5 +97,6 @@ if(isset($_FILES) && isset($_FILES['myfile']) && !empty($_FILES['myfile']['name'
     include('readXLSX.php');
     //echo "working yet";
     readAndCDMX($_FILES['myfile']['name']);
+    header('Location:../CDMX');
 }
 ?>

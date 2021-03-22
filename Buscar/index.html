@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Buscar</title>
+</head>
+<body>
+    <form id="main">
+        <select name="city">
+            <option value="CDMX">CDMX</option>
+            <option value="GDL">GDL</option>
+            <option value="MTY">MTY</option>
+            <option value="CUN">CUN</option>
+            <option value="SJD">SJD</option>
+            <option value="QRO">QRO</option>
+        </select>
+        <seLect name="atribute">
+            <option value="ID_SQL">Identificador</option>
+            <option value="Placas">Placas</option>
+            <option value="Operador">Operador</option>
+        </seLect>
+        <input type="text" name="query" placeholder="Buscar">
+        <input type="submit" value="Buscar">
+        <a href="../CDMX/"><button  type="button">Volver</button></a>
+        <a href="../logout.php"><button type="button">Logout</button></a>
+    </form>
+    <table id="table"></table>
+    <h2 id="res"></h2>
+</body>
+<script src="buscar.js"></script>
+</html>
