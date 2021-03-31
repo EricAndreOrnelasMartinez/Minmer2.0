@@ -79,9 +79,9 @@ function readAndGDL($fileU){
     $isfished1 = false;
     $HorarioT1 = "Error";
     for($i = 2; $i <= $nRows1; $i++){
-        $FechaCP = $obReader->getActiveSheet()->getCell('A'.$i)->getCalculatedValue();
+        $FechaCP = $obReader1->getActiveSheet()->getCell('A'.$i)->getCalculatedValue();
         $FechaC1 = date("Y-m-d", PHPExcel_Shared_Date::ExcelToPHP($FechaCP)); 
-        $FechaEP = $obReader->getActiveSheet()->getCell('B'.$i)->getCalculatedValue();
+        $FechaEP = $obReader1->getActiveSheet()->getCell('B'.$i)->getCalculatedValue();
         $FechaE1 = date("Y-m-d", PHPExcel_Shared_Date::ExcelToPHP($FechaEP)); 
         $Operador1 = $obReader1->getActiveSheet()->getCell('C'.$i)->getCalculatedValue();
         $Placas1 = $obReader1->getActiveSheet()->getCell('D'.$i)->getCalculatedValue();
@@ -135,9 +135,9 @@ function readAndMTY($fileU){
     $isfished2 = false;
     $HorarioT2 = "Error";
     for($i = 2; $i <= $nRows2; $i++){
-        $FechaCP = $obReader->getActiveSheet()->getCell('A'.$i)->getCalculatedValue();
+        $FechaCP = $obReader2->getActiveSheet()->getCell('A'.$i)->getCalculatedValue();
         $FechaC2 = date("Y-m-d", PHPExcel_Shared_Date::ExcelToPHP($FechaCP)); 
-        $FechaEP = $obReader->getActiveSheet()->getCell('B'.$i)->getCalculatedValue();
+        $FechaEP = $obReader2->getActiveSheet()->getCell('B'.$i)->getCalculatedValue();
         $FechaE2 = date("Y-m-d", PHPExcel_Shared_Date::ExcelToPHP($FechaEP)); 
         $Operador2 = $obReader2->getActiveSheet()->getCell('C'.$i)->getCalculatedValue();
         $Placas2 = $obReader2->getActiveSheet()->getCell('D'.$i)->getCalculatedValue();
@@ -191,9 +191,9 @@ function readAndCUN($fileU){
     $isfished2 = false;
     $HorarioT2 = "Error";
     for($i = 2; $i <= $nRows2; $i++){
-        $FechaCP = $obReader->getActiveSheet()->getCell('A'.$i)->getCalculatedValue();
+        $FechaCP = $obReader2->getActiveSheet()->getCell('A'.$i)->getCalculatedValue();
         $FechaC2 = date("Y-m-d", PHPExcel_Shared_Date::ExcelToPHP($FechaCP)); 
-        $FechaEP = $obReader->getActiveSheet()->getCell('B'.$i)->getCalculatedValue();
+        $FechaEP = $obReader2->getActiveSheet()->getCell('B'.$i)->getCalculatedValue();
         $FechaE2 = date("Y-m-d", PHPExcel_Shared_Date::ExcelToPHP($FechaEP)); 
         $Operador2 = $obReader2->getActiveSheet()->getCell('C'.$i)->getCalculatedValue();
         $Placas2 = $obReader2->getActiveSheet()->getCell('D'.$i)->getCalculatedValue();
@@ -246,9 +246,9 @@ function readAndSJD($fileU){
     $isfished2 = false;
     $HorarioT2 = "Error";
     for($i = 2; $i <= $nRows2; $i++){
-        $FechaCP = $obReader->getActiveSheet()->getCell('A'.$i)->getCalculatedValue();
+        $FechaCP = $obReader2->getActiveSheet()->getCell('A'.$i)->getCalculatedValue();
         $FechaC2 = date("Y-m-d", PHPExcel_Shared_Date::ExcelToPHP($FechaCP)); 
-        $FechaEP = $obReader->getActiveSheet()->getCell('B'.$i)->getCalculatedValue();
+        $FechaEP = $obReader2->getActiveSheet()->getCell('B'.$i)->getCalculatedValue();
         $FechaE2 = date("Y-m-d", PHPExcel_Shared_Date::ExcelToPHP($FechaEP));
         $Operador2 = $obReader2->getActiveSheet()->getCell('C'.$i)->getCalculatedValue();
         $Placas2 = $obReader2->getActiveSheet()->getCell('D'.$i)->getCalculatedValue();
@@ -301,9 +301,9 @@ function readAndQRO($fileU){
     $isfished2 = false;
     $HorarioT2 = "Error";
     for($i = 2; $i <= $nRows2; $i++){
-        $FechaCP = $obReader->getActiveSheet()->getCell('A'.$i)->getCalculatedValue();
+        $FechaCP = $obReader2->getActiveSheet()->getCell('A'.$i)->getCalculatedValue();
         $FechaC2 = date("Y-m-d", PHPExcel_Shared_Date::ExcelToPHP($FechaCP)); 
-        $FechaEP = $obReader->getActiveSheet()->getCell('B'.$i)->getCalculatedValue();
+        $FechaEP = $obReader2->getActiveSheet()->getCell('B'.$i)->getCalculatedValue();
         $FechaE2 = date("Y-m-d", PHPExcel_Shared_Date::ExcelToPHP($FechaEP));
         $Operador2 = $obReader2->getActiveSheet()->getCell('C'.$i)->getCalculatedValue();
         $Placas2 = $obReader2->getActiveSheet()->getCell('D'.$i)->getCalculatedValue();
