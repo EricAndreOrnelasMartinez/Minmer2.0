@@ -123,21 +123,21 @@ if(validation($resultCust)){
             ?>
             <?php if(implode(mysqli_fetch_assoc($resultFinish)) === '0'){ ?> 
             <h3>Este proceso esta completo al: <?php echo $total ?>%. ¿Desea terminarlo?</h3>
-            <?php }?>
+            <?php 
+           ?>
             <form id="data">
+            <input type="email" name="emailC" placeholde="Email del cliente" required>
             <input type="hidden" name="city" value="<?php echo $city?>">
             <input type="hidden" name="id" value="<?php echo $tem_id?>">
-            <?php if(implode(mysqli_fetch_assoc($resultFinish)) === '0'){ ?>
+            <?php echo implode(mysqli_fetch_assoc($resultFinish)); ?>
             <input type="submit" value="Terminar">
-            <?php }else{
-               ?>
-               <script>document.write('<h2>Este proceso ya está terminado</h2>')</script>
-               <?php
-             } ?>
             <a href="../CDMX/"><button type="button">Cancelar</button></a>
             <h3 id="res"></h3>
             </form>
-            
+            <?php }else{?>
+            <h3>Proceso terminado</h3>
+            <a href="../CDMX/"><button type="button">Volver</button></a>
+            <?php } ?>
             <?php
         }
         ?></div>
