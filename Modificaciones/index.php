@@ -40,4 +40,5 @@
         <a href="../CDMX/"><button type="button">Volver</button></a>
     </table>
 </body>
+<script src="secureacces.js"></script>
 </html>

@@ -23,7 +23,8 @@ $isfished = false;
 $nRows = $obReader->setActiveSheetIndex(0)->getHighestRow();
 for($i = 2; $i <= $nRows; $i++){
     $HorarioT = "error";
-    $FechaC = $obReader->getActiveSheet()->getCell('A'.$i)->getCalculatedValue();
+    $FechaCP = $obReader->getActiveSheet()->getCell('A'.$i)->getCalculatedValue();
+    $FechaC = date("Y-m-d", PHPExcel_Shared_Date::ExcelToPHP($InvDate)); 
     $FechaE = $obReader->getActiveSheet()->getCell('B'.$i)->getCalculatedValue();
     $Operador = $obReader->getActiveSheet()->getCell('C'.$i)->getCalculatedValue();
     $Placas = $obReader->getActiveSheet()->getCell('D'.$i)->getCalculatedValue();
